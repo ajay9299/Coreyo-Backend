@@ -36,7 +36,7 @@ export const weatherController = async (cityName) => {
     });
 
     // Store data on redis
-    const dataKey = new Date().toDateString();
+    const dataKey = new Date().toDateString() + cityName;
 
     // Store the data in redis based on day of search
     await redisClient.set(dataKey, JSON.stringify(fivDaysForecast));

@@ -32,18 +32,18 @@ app.use('/api',routes)
 console.log(`Environment ===> ${process.env.NODE_ENV}`) 
 
 // Db connection
-const {url} = config.db;
-mongoose
-  .connect(url, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
-  .then((result) => {
-    console.log("===== Connected to MongoDB =====");
-  })
-  .catch((err) => {
-    throw new Error("MongoDB Connection Error!", err);
-  });
+// const {url} = config.db;
+// mongoose
+//   .connect(url, {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//   })
+//   .then((result) => {
+//     console.log("===== Connected to MongoDB =====");
+//   })
+//   .catch((err) => {
+//     throw new Error("MongoDB Connection Error!", err);
+//   });
 
 // This should be the last route else any after it wont work
 app.use("*", (req, res) => {

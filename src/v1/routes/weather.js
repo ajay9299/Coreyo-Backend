@@ -21,7 +21,7 @@ router.get("/weather", async (req, res, next) => {
     }
 
     // Fetch current day
-    const dataKey = new Date().toDateString();
+    const dataKey = new Date().toDateString()+cityName;
 
     // Search data in redis cache
     const isCachedData = await redisData(dataKey);

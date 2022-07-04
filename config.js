@@ -1,6 +1,7 @@
 // Fetch the environment details
 const environment = process.env.NODE_ENV;
 
+
 const config = {
   dev: {
     db: {
